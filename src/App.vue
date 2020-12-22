@@ -1,14 +1,6 @@
 <template>
   <v-app id="inspire">
-    <v-system-bar app>
-      <v-spacer></v-spacer>
 
-      <v-icon>mdi-square</v-icon>
-
-      <v-icon>mdi-circle</v-icon>
-
-      <v-icon>mdi-triangle</v-icon>
-    </v-system-bar>
 
     <v-app-bar app>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
@@ -37,14 +29,14 @@
           <v-list-item-title>Inicio</v-list-item-title>
         </v-list-item>
 
-        <v-list-item
+        <!-- <v-list-item
         to="Login">
           <v-list-item-icon>
             <v-icon>mdi-login</v-icon>
           </v-list-item-icon>
   
           <v-list-item-title>Login</v-list-item-title>
-        </v-list-item>
+        </v-list-item> -->
   
         <v-list-group
           :value="true"
@@ -135,7 +127,6 @@ export default {
     drawer: null,
         admins: [
       ['Usuarios', 'mdi-account-multiple-outline', 'Usuarios'],
-      ['Configuracion', 'mdi-cog-outline'],
     ],
     cruds: [
       ['Articulos', 'mdi-cart', 'Articulos'],

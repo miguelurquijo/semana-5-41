@@ -64,7 +64,7 @@
                     <img src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_698,h_465/v1579807296/assets/99/1eefcc-0df5-47b3-b678-e815a16d4d54/original/UF-EMEA-Carrier.jpg" alt="Carrier" role="presentation" aria-hidden="true" class="bf bp d5 r7 r8">
                     <h5 class="card-title">Carriers</h5>
                     <p class="card-text">More flexible bookings. One tap away</p>
-                    <a href="#" class="btn btn-primary">Learn more</a>
+                    <a href="#" class="btn btn-secondary">Learn more</a>
                   </div>
                 </div>
               </div>
@@ -74,7 +74,7 @@
                   <img src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_698,h_465/v1579805807/assets/e7/b2a0a8-769d-403d-83b9-34928b87da94/original/UF-EMEA-Shipper-Warehouse-Stacks-Patricia-08537.jpg" alt="Shipper" role="presentation" aria-hidden="true" class="bf bp d5 r7 r8">
                     <h5 class="card-title">Shippers</h5>
                     <p class="card-text">Tender shipments easily. Get quotes instantly.</p>
-                    <a href="#" class="btn btn-primary">Learn more</a>
+                    <a href="#"  class="btn btn-secondary">Learn more</a>
                   </div>
                 </div>
               </div>
@@ -137,58 +137,6 @@
   export default {
     name: 'HelloWorld',
 
-    data: () => ({
-      ecosystem: [
-        {
-          text: 'vuetify-loader',
-          href: 'https://github.com/vuetifyjs/vuetify-loader',
-        },
-        {
-          text: 'github',
-          href: 'https://github.com/vuetifyjs/vuetify',
-        },
-        {
-          text: 'awesome-vuetify',
-          href: 'https://github.com/vuetifyjs/awesome-vuetify',
-        },
-      ],
-      importantLinks: [
-        {
-          text: 'Documentation',
-          href: 'https://vuetifyjs.com',
-        },
-        {
-          text: 'Chat',
-          href: 'https://community.vuetifyjs.com',
-        },
-        {
-          text: 'Made with Vuetify',
-          href: 'https://madewithvuejs.com/vuetify',
-        },
-        {
-          text: 'Twitter',
-          href: 'https://twitter.com/vuetifyjs',
-        },
-        {
-          text: 'Articles',
-          href: 'https://medium.com/vuetify',
-        },
-      ],
-      whatsNext: [
-        {
-          text: 'Explore components',
-          href: 'https://vuetifyjs.com/components/api-explorer',
-        },
-        {
-          text: 'Select a layout',
-          href: 'https://vuetifyjs.com/getting-started/pre-made-layouts',
-        },
-        {
-          text: 'Frequently Asked Questions',
-          href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
-        },
-      ],
-    }),
   }
 </script>
 
@@ -255,6 +203,7 @@
 
 .card-title .card-text {
   text-align: center;
+  color:white;
 }
 
 .estitloTiulo {

@@ -1,19 +1,17 @@
 import Vue from 'vue'
 //import './plugins/axios'
-import axios from "axios"
+import axios from 'axios'
 import App from './App.vue'
 import router from './router'
 import vuetify from './plugins/vuetify';
 
+const base = axios.create({
+  baseURL: 'http://localhost:3000/api'
+})
+
+Vue.prototype.$http = base;
+
 Vue.config.productionTip = false
-
-const axiosConfig = {
-  baseUrl: 'http://localhost:3000/api',
-  timeout:30000,
-}
-
-Vue.prototype.$axios = axios.create(axiosConfig)
-
 
 new Vue({
   router,

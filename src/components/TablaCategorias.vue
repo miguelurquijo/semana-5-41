@@ -86,7 +86,7 @@
                   </v-dialog>
                 </v-toolbar>
               </template>
-              <template v-slot:item.actions ="{ item }">
+              <template v-slot:[`item.actions`] ="{ item }">
                 <v-icon
                   small
                   class="mr-2"
@@ -167,6 +167,7 @@ export default {
 
   created () {
     this.initialize()
+    this.list()
 
     // axios.get("http://localhost:3000/api/categoria/list").then((result) => {
     // debugger
@@ -193,7 +194,7 @@ export default {
     },
 
     list(){
-          axios.get("http://localhost:3000/api/categoria/list")
+          this.$http.get('/categoria/list')
           .then((response) =>{
             //console.log(response)
             this.categorias = response.data
@@ -221,9 +222,9 @@ export default {
     deleteItemConfirm () {
 
       if (this.editedItem.estado === 1) {
-          axios.put('http://localhost:3000/api/categoria/deactivate', {id: this.editedItem.id})
+          this.$http.put('/categoria/deactivate', {id: this.editedItem.id})
       } else {
-          axios.put('http://localhost:3000/api/categoria/activate', {id: this.editedItem.id})
+          this.$http.put('/categoria/activate', {id: this.editedItem.id})
       }
       this.closeDelete()
     },
@@ -234,6 +235,7 @@ export default {
         this.editedItem = Object.assign({}, this.defaultItem)
         this.editedIndex = -1
       })
+      this.list()
     },
 
     closeDelete () {
@@ -255,7 +257,7 @@ export default {
           id: this.editedItem.id
         }
 
-        axios.put('http://localhost:3000/api/categoria/update', objetoBusqueda)
+        this.$http.put('/categoria/update', objetoBusqueda)
         Object.assign(this.categorias[this.editedIndex], this.editedItem)
       } else {
 
@@ -265,7 +267,7 @@ export default {
           descripcion: this.editedItem.descripcion,
           estado: 1
         }
-        axios.post('http://localhost:3000/api/categoria/add', objetoBusqueda)
+        this.$http.post('/categoria/add', objetoBusqueda)
         this.categorias.push(this.editedItem)
         this.list()
       }

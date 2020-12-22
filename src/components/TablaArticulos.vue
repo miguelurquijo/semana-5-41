@@ -40,26 +40,18 @@
                       <v-card-text>
                         <v-container>
                           <v-row>
-                            <v-col
-                              cols="12"
-                              sm="6"
-                              md="4"
-                            >
                               <v-text-field
                                 v-model="editedItem.nombre"
                                 label="nombre (g)"
                               ></v-text-field>
-                            </v-col>
-                            <v-col
-                              cols="12"
-                              sm="6"
-                              md="4"
-                            >
-                              <v-text-field
+                          </v-row>
+                          <v-row>
+                              <v-textarea
                                 v-model="editedItem.descripcion"
                                 label="descripcion (g)"
-                              ></v-text-field>
-                            </v-col>
+                              ></v-textarea>
+                          </v-row>
+                          <v-row>
                             <v-col
                               cols="12"
                               sm="6"
@@ -106,7 +98,7 @@
                   </v-dialog>
                 </v-toolbar>
               </template>
-              <template v-slot:item.actions ="{ item }">
+              <template v-slot:[`item.actions`] ="{ item }">
                 <v-icon
                   small
                   class="mr-2"
@@ -118,7 +110,7 @@
                   small
                   @click="deleteItem(item)"
                 >
-                  mdi-delete
+                  mdi-checkbox-marked-outline
                 </v-icon>
               </template>
               <template v-slot:no-data>
@@ -174,7 +166,7 @@ export default {
 
   computed: {
     formTitle () {
-      return this.editedIndex === -1 ? 'New Item' : 'Edit Item'
+      return this.editedIndex === -1 ? 'Nuevo Articulo' : 'Edit Item'
     },
   },
 
@@ -189,6 +181,7 @@ export default {
 
   created () {
     this.initialize()
+    this.list()
   },
 
   methods: {
@@ -207,7 +200,7 @@ export default {
     },
 
     list(){
-       axios.get('http://localhost:3000/api/articulo/list')
+       this.$http.get('/articulo/list')
         .then((response) =>{
           this.articulos = response.data
         })
@@ -230,9 +223,9 @@ export default {
 
     deleteItemConfirm () {
       if (this.editedItem.estado === 1) {
-          axios.put('http://localhost:3000/api/articulo/deactivate', {id: this.editedItem.id})
+          this.$http.put('/articulo/deactivate', {id: this.editedItem.id})
       } else {
-          axios.put('http://localhost:3000/api/articulo/activate', {id: this.editedItem.id})
+          this.$http.put('/articulo/activate', {id: this.editedItem.id})
       }
       this.closeDelete()
     },
@@ -251,6 +244,7 @@ export default {
         this.editedItem = Object.assign({}, this.defaultItem)
         this.editedIndex = -1
       })
+      this.list()
     },
 
     save () {
@@ -264,7 +258,7 @@ export default {
           categoriaId: this.editedItem.categoriaId
         }
 
-        axios.put('http://localhost:3000/api/articulo/update', objetoBusqueda)
+        this.$http.put('/articulo/update', objetoBusqueda)
         this.list()
         Object.assign(this.articulos[this.editedIndex], this.editedItem)
       } else {
@@ -276,7 +270,7 @@ export default {
           categoriaId: this.editedItem.categoriaId,
           estado: 1
         }
-        axios.post('http://localhost:3000/api/articulo/add', objetoBusqueda)
+        this.$http.post('/articulo/add', objetoBusqueda)
         this.articulos.push(this.editedItem)
         this.list()
       }

@@ -2,7 +2,7 @@
     <div>
         <v-data-table
               :headers="headers"
-              :items="articulos"
+              :items="usuarios"
               sort-by="id"
               class="elevation-1"
             >
@@ -10,7 +10,7 @@
                 <v-toolbar
                   flat
                 >
-                  <v-toolbar-title>Listado de Usuarios</v-toolbar-title>
+                  <v-toolbar-title>Listado Usuarios</v-toolbar-title>
                   <v-divider
                     class="mx-4"
                     inset
@@ -40,66 +40,22 @@
                       <v-card-text>
                         <v-container>
                           <v-row>
-                            <v-col
-                              cols="12"
-                              sm="6"
-                              md="4"
-                            >
-                              <v-text-field
-                                v-model="editedItem.name"
-                                label="Dessert name"
-                              ></v-text-field>
-                            </v-col>
-                            <v-col
-                              cols="12"
-                              sm="6"
-                              md="4"
-                            >
-                              <v-text-field
-                                v-model="editedItem.id"
-                                label="id"
-                              ></v-text-field>
-                            </v-col>
-                            <v-col
-                              cols="12"
-                              sm="6"
-                              md="4"
-                            >
                               <v-text-field
                                 v-model="editedItem.nombre"
                                 label="nombre (g)"
                               ></v-text-field>
-                            </v-col>
-                            <v-col
-                              cols="12"
-                              sm="6"
-                              md="4"
-                            >
+                          </v-row>
+                          <v-row>
                               <v-text-field
-                                v-model="editedItem.descripcion"
-                                label="descripcion (g)"
+                                v-model="editedItem.email"
+                                label="Email (g)"
                               ></v-text-field>
-                            </v-col>
-                            <v-col
-                              cols="12"
-                              sm="6"
-                              md="4"
-                            >
+                          </v-row>
+                          <v-row>
                               <v-text-field
-                                v-model="editedItem.estado"
-                                label="estado (g)"
+                                v-model="editedItem.password"
+                                label="Password (g)"
                               ></v-text-field>
-                            </v-col>
-                            <v-col
-                              cols="12"
-                              sm="6"
-                              md="4"
-                            >
-                              <v-text-field
-                                v-model="editedItem.categoriaId"
-                                label="CategoriaId (g)"
-                              ></v-text-field>
-                            </v-col>
                           </v-row>
                         </v-container>
                       </v-card-text>
@@ -136,7 +92,7 @@
                   </v-dialog>
                 </v-toolbar>
               </template>
-              <template v-slot: [item.actions] ="{ item }">
+              <template v-slot:[`item.actions`] ="{ item }">
                 <v-icon
                   small
                   class="mr-2"
@@ -148,7 +104,7 @@
                   small
                   @click="deleteItem(item)"
                 >
-                  mdi-delete
+                  mdi-checkbox-marked-outline
                 </v-icon>
               </template>
               <template v-slot:no-data>
@@ -172,39 +128,40 @@ export default {
     dialogDelete: false,
     headers: [
       {
-        text: 'Usuario',
+        text: 'Base de mis Usuarios',
         align: 'start',
         sortable: false,
         value: 'name',
       },
       { text: 'ID', value: 'id', sortable: false },
       { text: 'Nombre', value: 'nombre' },
-      { text: 'Descripcion', value: 'descripcion' },
+      { text: 'Correo Electronico', value: 'email' },
       { text: 'Estado', value: 'estado' },
-      { text: 'CategoriaId', value: 'categoriaId' },
       { text: 'Actions', value: 'actions', sortable: false },
     ],
-    articulos: [],
+    usuarios: [],
     editedIndex: -1,
     editedItem: {
       id: 0,
-      nombre: 0,
-      descripcion: 0,
+      nombre: '',
+      email: '',
+      password: '',
+      rol: '',
       estado: 0,
-      categoriaId: 0,
     },
     defaultItem: {
       id: 0,
-      nombre: 0,
-      descripcion: 0,
+      nombre: '',
+      email: '',
+      password: '',
+      rol: '',
       estado: 0,
-      categoriaId: 0,
     },
   }),
 
   computed: {
     formTitle () {
-      return this.editedIndex === -1 ? 'Nuevo Usuario' : 'Edit Item'
+      return this.editedIndex === -1 ? 'Nuevo usuario' : 'Edit Item'
     },
   },
 
@@ -219,26 +176,28 @@ export default {
 
   created () {
     this.initialize()
+    this.list()
   },
 
   methods: {
     initialize () {
+      this.list()
           
-       this.articulos = [
-         {
-           name: 'Frozen Yogurt',
-           id: 159,
-           nombre: 6.0,
-           descripcion: 24,
-           estado: 4.0,
-         },
-       ]
+      //  this.usuarios = [
+      //    {
+      //      name: 'Frozen Yogurt',
+      //      id: 159,
+      //      nombre: 6.0,
+      //      descripcion: 24,
+      //      estado: 4.0,
+      //    },
+      //  ]
     },
 
     list(){
-       axios.get('http://localhost:3000/api/categoria/list')
+       this.$http.get('/usuario/list')
         .then((response) =>{
-          this.articulos = response.data
+          this.usuarios = response.data
         })
         .catch( error => { 
             return error
@@ -246,19 +205,23 @@ export default {
     },
 
     editItem (item) {
-      this.editedIndex = this.articulos.indexOf(item)
+      this.editedIndex = this.usuarios.indexOf(item)
       this.editedItem = Object.assign({}, item)
       this.dialog = true
     },
 
     deleteItem (item) {
-      this.editedIndex = this.articulos.indexOf(item)
+      this.editedIndex = this.usuarios.indexOf(item)
       this.editedItem = Object.assign({}, item)
       this.dialogDelete = true
     },
 
     deleteItemConfirm () {
-      this.articulos.splice(this.editedIndex, 1)
+      if (this.editedItem.estado === 1) {
+          this.$http.put('/usuario/deactivate', {id: this.editedItem.id})
+      } else {
+          this.$http.put('/usuario/activate', {id: this.editedItem.id})
+      }
       this.closeDelete()
     },
 
@@ -268,6 +231,7 @@ export default {
         this.editedItem = Object.assign({}, this.defaultItem)
         this.editedIndex = -1
       })
+      this.list()
     },
 
     closeDelete () {
@@ -276,14 +240,37 @@ export default {
         this.editedItem = Object.assign({}, this.defaultItem)
         this.editedIndex = -1
       })
+      this.list()
     },
 
     save () {
       if (this.editedIndex > -1) {
-        Object.assign(this.articulos[this.editedIndex], this.editedItem)
+
+        // Editar en Base de datos
+        let objetoBusqueda = {
+          nombre: this.editedItem.nombre,
+          email: this.editedItem.email,
+          id: this.editedItem.id
+        }
+
+        this.$http.put('/usuario/update', objetoBusqueda)
+        this.list()
+        Object.assign(this.usuarios[this.editedIndex], this.editedItem)
       } else {
-        this.articulos.push(this.editedItem)
+
+        // Crear en Base de datos
+        let objetoBusqueda = {
+          nombre: this.editedItem.nombre,
+          email: this.editedItem.email,
+          password: this.editedItem.password,
+          rol: this.editedItem.rol,
+          estado: 1
+        }
+        this.$http.post('/usuario/add', objetoBusqueda)
+        this.usuarios.push(this.editedItem)
+        this.list()
       }
+      this.list()
       this.close()
     },
   }      
