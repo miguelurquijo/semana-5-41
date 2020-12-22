@@ -258,6 +258,7 @@ export default {
         }
 
         this.$http.put('/categoria/update', objetoBusqueda)
+        this.list()
         Object.assign(this.categorias[this.editedIndex], this.editedItem)
       } else {
 
