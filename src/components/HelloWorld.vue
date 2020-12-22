@@ -1,7 +1,7 @@
 <template>
   <div>
     <div >
-      <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light ">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light ">
           <a class="navbar-brand " href="# ">
               <img src="https://i.ibb.co/vQS9CL1/logo.png" width="30 " height="30 " class="d-inline-block align-top " alt=" " loading="lazy "> CARGO SOLUTIONS S.A.S
           </a>

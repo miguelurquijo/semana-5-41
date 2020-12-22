@@ -114,6 +114,8 @@
 </template>
 
 <script>
+import axios from "axios"
+
 export default {
    
   data: () => ({
@@ -165,25 +167,20 @@ export default {
 
   created () {
     this.initialize()
+
+    // axios.get("http://localhost:3000/api/categoria/list").then((result) => {
+    // debugger
+    // this.categorias = result.data
+    // })
   },
 
   methods: {
 
-    list(){
-      this.$axios.get('/categoria/list')
-          .then((response) =>{
-            this.categorias = response.data
-          })
-          .catch( error => { 
-            return error
-          })
-    },
-
     initialize () {
 
       this.list()
-          
-      //  this.categorias = [
+      //this.list()
+      // this.categorias = [
       //    {
       //      name: 'Frozen Yogurt',
       //      id: 159,
@@ -192,6 +189,18 @@ export default {
       //      estado: 4.0,
       //    },
       //  ]
+      
+    },
+
+    list(){
+          axios.get("http://localhost:3000/api/categoria/list")
+          .then((response) =>{
+            //console.log(response)
+            this.categorias = response.data
+          })
+          .catch( error => { 
+            return error
+          })
     },
 
     editItem (item) {
@@ -212,11 +221,10 @@ export default {
     deleteItemConfirm () {
 
       if (this.editedItem.estado === 1) {
-          this.$axios.put('/categoria/deactivate', {id: this.editedItem.id})
+          axios.put('http://localhost:3000/api/categoria/deactivate', {id: this.editedItem.id})
       } else {
-          this.$axios.put('/categoria/activate', {id: this.editedItem.id})
+          axios.put('http://localhost:3000/api/categoria/activate', {id: this.editedItem.id})
       }
-      
       this.closeDelete()
     },
 
@@ -244,10 +252,10 @@ export default {
         let objetoBusqueda = {
           nombre: this.editedItem.nombre,
           descripcion: this.editedItem.descripcion,
-          id: this.editItem.id
+          id: this.editedItem.id
         }
-        this.$axios.put('/categoria//update', objetoBusqueda)
 
+        axios.put('http://localhost:3000/api/categoria/update', objetoBusqueda)
         Object.assign(this.categorias[this.editedIndex], this.editedItem)
       } else {
 
@@ -257,9 +265,9 @@ export default {
           descripcion: this.editedItem.descripcion,
           estado: 1
         }
-        this.$axios.post('/categoria/add', objetoBusqueda)
-
+        axios.post('http://localhost:3000/api/categoria/add', objetoBusqueda)
         this.categorias.push(this.editedItem)
+        this.list()
       }
       // Actualizar en la tabla
       this.list()

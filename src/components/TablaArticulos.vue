@@ -46,26 +46,6 @@
                               md="4"
                             >
                               <v-text-field
-                                v-model="editedItem.name"
-                                label="Dessert name"
-                              ></v-text-field>
-                            </v-col>
-                            <v-col
-                              cols="12"
-                              sm="6"
-                              md="4"
-                            >
-                              <v-text-field
-                                v-model="editedItem.id"
-                                label="id"
-                              ></v-text-field>
-                            </v-col>
-                            <v-col
-                              cols="12"
-                              sm="6"
-                              md="4"
-                            >
-                              <v-text-field
                                 v-model="editedItem.nombre"
                                 label="nombre (g)"
                               ></v-text-field>
@@ -78,16 +58,6 @@
                               <v-text-field
                                 v-model="editedItem.descripcion"
                                 label="descripcion (g)"
-                              ></v-text-field>
-                            </v-col>
-                            <v-col
-                              cols="12"
-                              sm="6"
-                              md="4"
-                            >
-                              <v-text-field
-                                v-model="editedItem.estado"
-                                label="estado (g)"
                               ></v-text-field>
                             </v-col>
                             <v-col
@@ -136,7 +106,7 @@
                   </v-dialog>
                 </v-toolbar>
               </template>
-              <template v-slot: [item.actions] ="{ item }">
+              <template v-slot:item.actions ="{ item }">
                 <v-icon
                   small
                   class="mr-2"
@@ -188,15 +158,15 @@ export default {
     editedIndex: -1,
     editedItem: {
       id: 0,
-      nombre: 0,
-      descripcion: 0,
+      nombre: '',
+      descripcion: '',
       estado: 0,
       categoriaId: 0,
     },
     defaultItem: {
       id: 0,
-      nombre: 0,
-      descripcion: 0,
+      nombre: '',
+      descripcion: '',
       estado: 0,
       categoriaId: 0,
     },
@@ -223,20 +193,21 @@ export default {
 
   methods: {
     initialize () {
+      this.list()
           
-       this.articulos = [
-         {
-           name: 'Frozen Yogurt',
-           id: 159,
-           nombre: 6.0,
-           descripcion: 24,
-           estado: 4.0,
-         },
-       ]
+      //  this.articulos = [
+      //    {
+      //      name: 'Frozen Yogurt',
+      //      id: 159,
+      //      nombre: 6.0,
+      //      descripcion: 24,
+      //      estado: 4.0,
+      //    },
+      //  ]
     },
 
     list(){
-       axios.get('http://localhost:3000/api/categoria/list')
+       axios.get('http://localhost:3000/api/articulo/list')
         .then((response) =>{
           this.articulos = response.data
         })
@@ -258,7 +229,11 @@ export default {
     },
 
     deleteItemConfirm () {
-      this.articulos.splice(this.editedIndex, 1)
+      if (this.editedItem.estado === 1) {
+          axios.put('http://localhost:3000/api/articulo/deactivate', {id: this.editedItem.id})
+      } else {
+          axios.put('http://localhost:3000/api/articulo/activate', {id: this.editedItem.id})
+      }
       this.closeDelete()
     },
 
@@ -280,10 +255,32 @@ export default {
 
     save () {
       if (this.editedIndex > -1) {
+
+        // Editar en Base de datos
+        let objetoBusqueda = {
+          nombre: this.editedItem.nombre,
+          descripcion: this.editedItem.descripcion,
+          id: this.editedItem.id,
+          categoriaId: this.editedItem.categoriaId
+        }
+
+        axios.put('http://localhost:3000/api/articulo/update', objetoBusqueda)
+        this.list()
         Object.assign(this.articulos[this.editedIndex], this.editedItem)
       } else {
+
+        // Crear en Base de datos
+        let objetoBusqueda = {
+          nombre: this.editedItem.nombre,
+          descripcion: this.editedItem.descripcion,
+          categoriaId: this.editedItem.categoriaId,
+          estado: 1
+        }
+        axios.post('http://localhost:3000/api/articulo/add', objetoBusqueda)
         this.articulos.push(this.editedItem)
+        this.list()
       }
+      this.list()
       this.close()
     },
   }      

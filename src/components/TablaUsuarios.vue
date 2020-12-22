@@ -29,7 +29,7 @@
                         v-bind="attrs"
                         v-on="on"
                       >
-                        AGREGAR ARTICULO
+                        AGREGAR USUARIO
                       </v-btn>
                     </template>
                     <v-card>
