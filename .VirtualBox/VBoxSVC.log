@@ -1,0 +1,155 @@
+00:00:00.009347 main     VirtualBox COM Server 6.1.14 r140239 win.amd64 (Sep  4 2020 08:29:36) release log
+00:00:00.009354 main     Log opened 2020-09-22T22:07:12.032796600Z
+00:00:00.009357 main     Build Type: release
+00:00:00.009381 main     OS Product: Windows 10
+00:00:00.009385 main     OS Release: 10.0.18363
+00:00:00.009388 main     OS Service Pack: 
+00:00:00.245108 main     DMI Product Name: Surface Laptop 2
+00:00:00.291240 main     DMI Product Version: 124000000000000000000000D:F B:0CA56309 F:U C:0A P:C1 S:01 
+00:00:00.291288 main     Firmware type: UEFI
+00:00:00.292135 main     Secure Boot: VERR_PRIVILEGE_NOT_HELD
+00:00:00.292222 main     Host RAM: 8113MB (7.9GB) total, 4060MB (3.9GB) available
+00:00:00.292240 main     Executable: C:\Program Files\Oracle\VirtualBox\VBoxSVC.exe
+00:00:00.292242 main     Process ID: 6260
+00:00:00.292244 main     Package type: WINDOWS_64BITS_GENERIC
+00:00:00.558392          VirtualBox: object creation starts
+00:00:00.564805          Home directory: 'C:\Users\migue\.VirtualBox'
+00:00:00.565943          Installed Drivers:
+00:00:00.613748            C:\WINDOWS\system32\DRIVERS\VBoxDrv.sys (Version: 6.1.14.40239)
+00:00:00.616630            C:\WINDOWS\system32\DRIVERS\VBoxUSBMon.sys (Version: 6.1.14.40239)
+00:00:00.619976            C:\WINDOWS\system32\DRIVERS\VBoxNetAdp6.sys (Version: 6.1.14.40239)
+00:00:00.623386            C:\WINDOWS\system32\DRIVERS\VBoxNetLwf.sys (Version: 6.1.14.40239)
+00:00:00.640499          Loading settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:00:00.666957          usbLibGetDevices: Starting USB device enumeration
+00:00:00.694191          Getting USB descriptor (id 0) failed (dwErr=31) on hub USB#ROOT_HUB30#4&db2fc44&0&0#{f18a0e88-c30c-11d0-8815-00a0c906bed8} port 5
+00:00:00.701981          usbLibGetDevices: Found 1 USB devices, 0 captured
+00:00:00.705845          USB: Unknown USB device detected (idVendor: 0x1286, idProduct: 0x204c)
+00:00:01.059660          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:00:01.077620          HostDnsMonitor: initializing
+00:00:01.109211          HostDnsMonitor: updating information
+00:00:01.124018          HostDnsMonitor: old information
+00:00:01.124024            no server entries
+00:00:01.124028            no domain set
+00:00:01.124030            no search string entries
+00:00:01.124032          HostDnsMonitor: new information
+00:00:01.124033            server 1: 10.128.128.128
+00:00:01.124036            no domain set
+00:00:01.124038            no search string entries
+00:00:01.625394          VD: VDInit finished with VINF_SUCCESS
+00:00:01.666002          Loading settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:00:01.706554          OCI: Local config file 'C:\Users\migue\.VirtualBox\oci_config' does not exist
+00:00:01.706933          OCI: Original config file 'C:\Users\migue\.oci\config' does not exist
+00:00:01.706938          OCI: Reading profiles finished with status ERROR_SUCCESS
+00:00:01.707818          ExtPack: Created cloud provider 'OCI' (hrc=ERROR_SUCCESS)
+00:00:01.708001          VirtualBox: object created
+00:00:03.600391          Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:00:03.689465          Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:00:09.603055          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:00:09.738160          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:00:44.600493          Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:00:48.154275          Launched VM: 67555792 pid: 17532 (0x447c) frontend: GUI/Qt name: xubuntu
+00:00:57.212677          Load [C:\Program Files\Oracle\VirtualBox\ExtensionPacks\Oracle_VM_VirtualBox_Extension_Pack\win.amd64\VBoxHostWebcam.DLL] vrc=VINF_SUCCESS
+00:01:30.433021          ERROR [COM]: aRC=VBOX_E_IPRT_ERROR (0x80bb0005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={SessionMachine} aText={Saved screenshot data is not available (VERR_NOT_SUPPORTED)}, preserve=false aResultDetail=-37
+00:01:31.083020          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:08:25.259104          Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:08:25.310650          Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:08:25.363831          Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:13:48.059738          Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:13:48.113289          Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:13:59.223130          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:13:59.271215          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:14:09.128020          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:14:09.178312          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:14:29.964147          Launched VM: 67650112 pid: 14844 (0x39fc) frontend: GUI/Qt name: xubuntu
+00:14:37.707730          Load [C:\Program Files\Oracle\VirtualBox\ExtensionPacks\Oracle_VM_VirtualBox_Extension_Pack\win.amd64\VBoxHostWebcam.DLL] vrc=VINF_SUCCESS
+00:15:06.128760          ERROR [COM]: aRC=VBOX_E_IPRT_ERROR (0x80bb0005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={SessionMachine} aText={Saved screenshot data is not available (VERR_NOT_SUPPORTED)}, preserve=false aResultDetail=-37
+00:15:06.478745          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:15:18.190762          Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:15:18.796304          Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:15:18.877300          Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:15:35.687520          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:15:35.741891          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:15:58.978526          Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:16:03.064791          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:16:03.117006          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:16:34.233547          Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:16:34.317201          Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:16:53.708621          ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={SessionMachine} aText={No storage device attached to device slot 0 on port 0 of controller 'SATA'}, preserve=false aResultDetail=0
+00:16:53.775893          Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:16:59.251411          Launched VM: 67567984 pid: 18740 (0x4934) frontend: GUI/Qt name: xubuntu
+00:17:07.684130          Load [C:\Program Files\Oracle\VirtualBox\ExtensionPacks\Oracle_VM_VirtualBox_Extension_Pack\win.amd64\VBoxHostWebcam.DLL] vrc=VINF_SUCCESS
+00:17:08.368964          ERROR [COM]: aRC=VBOX_E_IPRT_ERROR (0x80bb0005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={SessionMachine} aText={Saved screenshot data is not available (VERR_NOT_SUPPORTED)}, preserve=false aResultDetail=-37
+00:17:08.820360          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:19:52.012142          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:19:52.135951          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:20:05.939133          Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:20:06.052475          Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:20:12.951599          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:20:13.055365          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:20:21.964208          Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:20:23.224022          Launched VM: 67217712 pid: 12208 (0x2fb0) frontend: GUI/Qt name: xubuntu
+00:20:30.906688          Load [C:\Program Files\Oracle\VirtualBox\ExtensionPacks\Oracle_VM_VirtualBox_Extension_Pack\win.amd64\VBoxHostWebcam.DLL] vrc=VINF_SUCCESS
+00:20:31.491228          ERROR [COM]: aRC=VBOX_E_IPRT_ERROR (0x80bb0005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={SessionMachine} aText={Saved screenshot data is not available (VERR_NOT_SUPPORTED)}, preserve=false aResultDetail=-37
+00:20:32.030343          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:21:53.701778          Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:21:53.804104          Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:21:53.840993          Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:21:53.877121          Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:21:57.673335 Watcher  Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:22:02.977670 Watcher  Reaper: Pid 12208 (2fb0) exited normally: 1 (0x1)
+00:22:13.406601          Launched VM: 67664640 pid: 1188 (0x4a4) frontend: GUI/Qt name: xubuntu
+00:22:21.265001          Load [C:\Program Files\Oracle\VirtualBox\ExtensionPacks\Oracle_VM_VirtualBox_Extension_Pack\win.amd64\VBoxHostWebcam.DLL] vrc=VINF_SUCCESS
+00:22:21.860250          ERROR [COM]: aRC=VBOX_E_IPRT_ERROR (0x80bb0005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={SessionMachine} aText={Saved screenshot data is not available (VERR_NOT_SUPPORTED)}, preserve=false aResultDetail=-37
+00:22:22.518885          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:23:53.748232          Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:23:53.951384          ERROR [COM]: aRC=VBOX_E_IPRT_ERROR (0x80bb0005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={SessionMachine} aText={Saved screenshot data is not available (VERR_NOT_SUPPORTED)}, preserve=false aResultDetail=-37
+00:24:07.380957          Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:24:11.188567          Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:24:14.437052          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:24:14.484879          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:24:30.094567          Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:24:31.686753          Launched VM: 67568080 pid: 16152 (0x3f18) frontend: GUI/Qt name: xubuntu
+00:24:39.284909          Load [C:\Program Files\Oracle\VirtualBox\ExtensionPacks\Oracle_VM_VirtualBox_Extension_Pack\win.amd64\VBoxHostWebcam.DLL] vrc=VINF_SUCCESS
+00:24:48.153107          Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:24:48.279196          ERROR [COM]: aRC=VBOX_E_IPRT_ERROR (0x80bb0005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={SessionMachine} aText={Saved screenshot data is not available (VERR_NOT_SUPPORTED)}, preserve=false aResultDetail=-37
+00:24:48.544733          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:33:45.385696          Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:33:46.662036          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:33:46.798324          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:33:56.698753          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:33:56.748941          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:34:30.145662 createBase Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:34:37.536363          Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:34:39.210075          ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={SessionMachine} aText={No storage device attached to device slot 0 on port 0 of controller 'SATA'}, preserve=false aResultDetail=0
+00:34:39.214848          Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:34:39.365295          Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:34:40.983734          Launched VM: 67565264 pid: 12636 (0x315c) frontend: GUI/Qt name: xubuntu
+00:34:48.614533          Load [C:\Program Files\Oracle\VirtualBox\ExtensionPacks\Oracle_VM_VirtualBox_Extension_Pack\win.amd64\VBoxHostWebcam.DLL] vrc=VINF_SUCCESS
+00:34:49.094766          ERROR [COM]: aRC=VBOX_E_IPRT_ERROR (0x80bb0005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={SessionMachine} aText={Saved screenshot data is not available (VERR_NOT_SUPPORTED)}, preserve=false aResultDetail=-37
+00:34:49.781340          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:35:08.346216          Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:35:11.840428          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:35:11.889572          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:35:43.907266          Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:35:47.727687          ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={SessionMachine} aText={No storage device attached to device slot 0 on port 0 of controller 'SATA'}, preserve=false aResultDetail=0
+00:35:47.827143          Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:35:49.318127          Launched VM: 67191104 pid: 11472 (0x2cd0) frontend: GUI/Qt name: xubuntu
+00:35:58.191568          Load [C:\Program Files\Oracle\VirtualBox\ExtensionPacks\Oracle_VM_VirtualBox_Extension_Pack\win.amd64\VBoxHostWebcam.DLL] vrc=VINF_SUCCESS
+00:35:58.685966          ERROR [COM]: aRC=VBOX_E_IPRT_ERROR (0x80bb0005) aIID={85632c68-b5bb-4316-a900-5eb28d3413df} aComponent={SessionMachine} aText={Saved screenshot data is not available (VERR_NOT_SUPPORTED)}, preserve=false aResultDetail=-37
+00:35:59.058595          netIfIsWireless: CreateFile on '\\.\{9E478D4D-8CA5-47BC-996C-406DF6D0CD85}' failed with rcWin=2 (0x2) - ignoring
+00:43:45.343309          Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:44:40.769605          Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:44:54.936839          Import settings with version "1.16-macosx"
+00:44:54.937157          ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={d0a0163f-e254-4e5b-a1f2-011cf991c38d} aComponent={VirtualBoxWrap} aText={Could not find a registered machine named 'xubuntu'}, preserve=false aResultDetail=0
+00:44:54.938392          ERROR [COM]: aRC=VBOX_E_FILE_ERROR (0x80bb0004) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Could not find file for the medium 'C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu-disk001.vmdk' (VERR_FILE_NOT_FOUND)}, preserve=false aResultDetail=-102
+00:48:33.865000 createImport Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:48:34.013284 ApplImp  Saving settings file "C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu.vbox" with version "1.16-windows"
+00:48:34.078328 ApplImp  Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:58:57.177426          Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+00:59:00.253167          Saving settings file "C:\Users\migue\.VirtualBox\VirtualBox.xml" with version "1.12-windows"
+01:06:54.260271 main     VirtualBox: object deletion starts
+01:06:54.260430 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Medium 'C:\Users\migue\VirtualBox VMs\xubuntu\xubuntu-disk001.vdi' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+01:06:54.295604 main     HostDnsMonitor: shutting down ...
+01:06:54.296186 main     HostDnsMonitor: shut down
+01:06:54.313115 Watcher  ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={d0a0163f-e254-4e5b-a1f2-011cf991c38d} aComponent={VirtualBoxWrap} aText={The object is not ready}, preserve=false aResultDetail=0
+01:06:54.316292 main     VirtualBox: object deleted

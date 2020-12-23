@@ -1,0 +1,10 @@
+{
+    "username": "miguelu@wise-goat-wwqaj2.com",
+    "orgId": "00D3t000002pZMTEA2",
+    "accessToken": "3b8e673349eb718c95b6178838a6fe2b0f947d097cdd6512e9739e5c11f322f65baa6292a8ecfde854e00552a70b27086e568c8ac72796e92a2d85c20ee84f5167d636ab96c2aa427f7f9cad8c88b72c1ea000e1aaa16e2b7b2bf74044e57ac284f7b629e2ef766160ed1938ac0b40841ab9d4fd89cb:76733351b6e7524ed3819cb2ba1f2f36",
+    "refreshToken": "a11b0ea5636bbac68cfe625ed2b37c67961f00df23aee642a4c06a1a7f68f2b23da09325d7a7ecaa280e08b522943b920bdf3ab82e4f6469f2e2adaf69cd8adddcf2964e56a2cb828c76321058a2c564017460d1f6e5602b3127bef433:64a508deb05a3afb6df5dadd41be50c5",
+    "instanceUrl": "https://wise-goat-wwqaj2-dev-ed.my.salesforce.com",
+    "loginUrl": "https://login.salesforce.com/",
+    "clientId": "PlatformCLI",
+    "isDevHub": true
+}

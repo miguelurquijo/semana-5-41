@@ -1,0 +1,13 @@
+{
+    "orgId": "00D210000004FYPEA2",
+    "accessToken": "0f23f3f74bab9d3c6d874fece1731bec64a018107f2bdfd86c576fa7d7fd9e8b4f4c32fa06a60f2a72a4147e98430c3a826923ffa22dd6ad58b54bbd43665797d10cd5bc51bcbfba007e7370bcc14b084ca7cf356791f2a1dbc447bd14ac78287891aac12ea3afb45630708b3927719ab6ef465098d4:87e69600db42fa3952eaff51fdbc5412",
+    "refreshToken": "bffa694531ba3ceedccc8984644af8732cb8548cda39cdf617f9645c2d591f2a6f97efcad05f6d94854281c32bfcfbb780083411ebdaeb8d88abe72a3c6eb7caf22dc2a16049cf38a84932d03670c765e5ea7bd835b7820640149d6ec1:f147804ab17db0e789fdf6142dbe6088",
+    "instanceUrl": "https://velocity-customization-2888-dev-ed.cs26.my.salesforce.com/",
+    "loginUrl": "https://CS26.salesforce.com",
+    "username": "test-ftdg19o2chi3@example.com",
+    "clientId": "PlatformCLI",
+    "createdOrgInstance": "CS26",
+    "created": "1596633008965",
+    "devHubUsername": "miguelu@wise-goat-wwqaj2.com",
+    "expirationDate": "2020-08-12"
+}

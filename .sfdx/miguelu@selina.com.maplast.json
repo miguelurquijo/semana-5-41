@@ -1,0 +1,10 @@
+{
+    "orgId": "00D250000006wRHEAY",
+    "accessToken": "c4f757c9d3a6fbc95dd783c0df3527703853379a83c1a8e53e20c66501ae8a2a22b810cc2f4c780c56bfd438b134c1dd8c35a84b1c19f05359d8a3f4ab1387c4a1a5e06033cb3f35c5c6545b8893ff616df52f43b1ca8ca7b8d1ec3faa6bc4f359f1bee0a6d711b7e6e59f357f5549446b74dcb235e4:75ba53ccc5abc47561e27c7bd3a39314",
+    "refreshToken": "a14154a605bf9868cb5bc66e9c12d12914638102d2a9564af8264f83cbd5c96a41aae5ffe6a818ed1ee5ef22a0cfd3c6796b9720fce387aac923131f58d333172fcc105f69667dc732055daa633d5bb87f8fdf5702fa05dd26e53bb90c:832ebee74125583a0a597036d30c1113",
+    "instanceUrl": "https://selinagrowth--maplast.my.salesforce.com",
+    "loginUrl": "https://test.salesforce.com/",
+    "username": "miguelu@selina.com.maplast",
+    "clientId": "PlatformCLI",
+    "isDevHub": false
+}

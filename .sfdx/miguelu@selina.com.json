@@ -1,0 +1,10 @@
+{
+    "username": "miguelu@selina.com",
+    "orgId": "00D3z000000dLehEAE",
+    "accessToken": "f82568e092448b4ee00a0e6607bd1ba3572cccf7dd6660297839b58e345ac4c78b01816f715414e2f0bb3609ab5d6a5165870cb1f5cc5be1017efa6afe1ad3c674c2171ac788ac342d95988ecdc836fc3894d738433c6529aa6cb136fc77c0e917636de088654432c0dc0a7f988a71b6bab161dd9af3:44efe0bfe7b5824c1743dfdad03bee4b",
+    "refreshToken": "f72a4b2a5ce8ea142ed222104d2cb18d96630627abd398788bde6b72eed4d4177ad6997ec1f717fafe469020336a7604d0c74b7bf45334e5378a1397cf9230e3b439c78f4f25b9a9ebaf42bcd4aa49d9b04d2a5f0a9d9986c469d13748:fee63d58fcf405fe4d0ccab63526bc8d",
+    "instanceUrl": "https://selinagrowth.my.salesforce.com",
+    "loginUrl": "https://login.salesforce.com/",
+    "clientId": "PlatformCLI",
+    "isDevHub": false
+}
